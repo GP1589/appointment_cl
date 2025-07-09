@@ -7,7 +7,7 @@ on:
 env:
   NODE_VERSION: '22'
   AWS_REGION: 'us-east-1'
-  LAMBDA_FUNCTION_NAME: 'appointment-AppointmentPeFunction-ctf8BktpATtw'
+  LAMBDA_FUNCTION_NAME: 'appointment-AppointmentClFunction-RTL6sK9Ec325'
 jobs:
   deploy:
     runs-on: ubuntu-latest
