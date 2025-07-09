@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model AppointmentCL {
+  id               Int      @id @default(autoincrement())
+  insured_id       String   @db.VarChar(5)
+  schedule_id      Int
+  center_id        Int
+  specialty_id     Int
+  medic_id         Int
+  appointment_date DateTime @db.Timestamp
+  created_at       DateTime @default(now()) @db.Timestamp
+
+  @@map("appointments_cl")
+}
+
